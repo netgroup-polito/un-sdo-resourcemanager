@@ -14,8 +14,8 @@ $resources = file_get_contents('php://input');
 
 $arr = json_decode($resources);
 
+//Count the total number of resources used foreach types
 $c= countResources($arr);
-
 
 foreach ($c as $impl => $resource )
 {
@@ -44,8 +44,8 @@ foreach ($c as $impl => $resource )
 	}
 }
 
+//Updates resoruces file
 file_put_contents("resources.json",$resources);
-
 
 function countResources($arr)
 {
@@ -78,6 +78,8 @@ function countResources($arr)
 
 
 
+//Return the libvirt resource associated to the $vnf_name received as argument
+//if the resource is not found calls die()
 function lookup_by_vnf_name($vnf_name,$conn)
 {
 	$doms = libvirt_list_domains($conn);

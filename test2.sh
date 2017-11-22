@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#SDO validation
 SLEEP_TIME=240
 
 VM=$( virsh list | grep trcd1 | awk '{print $2 }')
