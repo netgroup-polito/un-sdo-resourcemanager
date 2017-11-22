@@ -4,7 +4,9 @@ This is a mock implementation of the ResourceManager for the Universal-Node orch
 
 # Dependencies 
 
+```
 apt-get install apache2 libapache2-mod-php php-libvirt-php
+```
 
 # Installation
 
@@ -12,8 +14,8 @@ apt-get install apache2 libapache2-mod-php php-libvirt-php
 
 - Uncomments this two lines inside /etc/libvirt/libvirtd.config:
 ```
-unix_sock_group = "libvirt"
-unix_sock_rw_perms = "0770"
+	unix_sock_group = "libvirt"
+	unix_sock_rw_perms = "0770"
 ```
 
 - Adds your unix user inside the "libvirt" group
@@ -58,4 +60,6 @@ This API receives the same JSON object retrived by resources_available.php, but 
 
 This CLI tool updates the available number of resources of type CPU and generate an event to inform the SDO
 
+```
 ./up.php new_number_of_cpu_available
+```
