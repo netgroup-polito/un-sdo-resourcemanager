@@ -1,6 +1,6 @@
 # un-sdo-resourcemanager
 
-This is a mock implementation of the ResourceManager for the Universal-Node orchestrator when used with KVM and libvirt
+This is a mock implementation of the ResourceManager for the Universal-Node orchestrator when used with KVM and libvirt.
 
 #Dependencies 
 
