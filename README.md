@@ -18,9 +18,13 @@ apt-get install apache2 libapache2-mod-php php-libvirt-php
 	unix_sock_rw_perms = "0770"
 ```
 
-- Adds your unix user inside the "libvirtd" group
+- Adds your unix user inside the "libvirtd" group (adduser netgroup libvirtd)
 
-- Updates the files update_resources.php and password.txt with the right credentials
+- Adds your webserver unix user inside the "libvirtd" group (adduser www-data libvirtd)
+
+- Updates the files update_resources.php (username) and password.txt (create this file with inside your password) with the right credentials
+
+- Change the default Apache2 port to 8079 (edit ports.conf and sites-enabled/000-default.conf)
 
 # HTTP API
 
