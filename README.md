@@ -12,13 +12,13 @@ apt-get install apache2 libapache2-mod-php php-libvirt-php
 
 - Copy all this file inside the www-root of Apache2 (e.g. /var/www or /var/www/html)
 
-- Uncomments this two lines inside /etc/libvirt/libvirtd.config:
+- Uncomments this two lines inside /etc/libvirt/libvirtd.conf:
 ```
-	unix_sock_group = "libvirt"
+	unix_sock_group = "libvirtd"
 	unix_sock_rw_perms = "0770"
 ```
 
-- Adds your unix user inside the "libvirt" group
+- Adds your unix user inside the "libvirtd" group
 
 - Updates the files update_resources.php and password.txt with the right credentials
 
